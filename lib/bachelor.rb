@@ -1,5 +1,6 @@
 def get_first_name_of_season_winner(data, season)
   my_season = data[season]
+  my_season.find {|status| status.fetch(:status).downcase == "winner"}
 end
 
 def get_contestant_name(data, occupation)
